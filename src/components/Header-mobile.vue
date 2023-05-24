@@ -38,13 +38,13 @@ import Switcher from "@/components/UI/Switcher";
 export default {
   name: "Header-mobile",
   components: {Switcher},
+  props:{
+    menu:{
+      type: Array,
+      required: true
+    }
+  },
   data: () => ({
-    menu: [
-      {title: "Заклади", url: "#restaurants", exact: false},
-      {title: "Доставка і оплата", url: "#delivery", exact: false},
-      {title: "Акції", url: "#promotions", exact: false},
-      {title: "Про нас", url: "#about", exact: false},
-    ],
     isOpen: false
   }),
   methods: {

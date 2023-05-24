@@ -41,7 +41,6 @@ export default {
   },
   methods: {
     async handleScroll() {
-      console.log(this.advantage_i)
       const element = this.$refs.elementToShow;
       const rect = element.getBoundingClientRect();
 

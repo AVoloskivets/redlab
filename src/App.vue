@@ -1,6 +1,6 @@
 <template :class="classMobile">
   <div :class="classMobile">
-    <component :is="layout"></component>
+    <component :is="layout" :menu="menu" ></component>
 
     <router-view/>
 
@@ -16,7 +16,13 @@ import HeaderMobile from "@/components/Header-mobile";
 export default {
   components: {HeaderMobile, OrderButton, Header},
   data: () => ({
-    isLargeScreen: true
+    isLargeScreen: true,
+    menu: [
+      {title: "Заклади", url: "#restaurants", exact: false},
+      {title: "Доставка і оплата", url: "#delivery", exact: false},
+      {title: "Акції", url: "#promotions", exact: false},
+      {title: "Про нас", url: "#about", exact: false},
+    ]
   }),
   computed: {
     classMobile(){
